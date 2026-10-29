@@ -2,8 +2,6 @@
 
 A free, native Windows download manager built with C# / .NET 8 / WPF. MIT licensed, with no third-party runtime libraries.
 
-Version 1.2 adds automatic browser-download capture with an on/off switch. KDM runs in the Windows system tray and includes a Chrome/Edge extension with desktop connection feedback and an Open KDM action.
-
 ## Run
 
 Open `artifacts\KDM\KabirDownloadManager.exe` after building. The published folder includes the .NET runtime; keep its files together. Windows 10/11 x64 is the default target. Windows 11 supplies native rounded window corners through DWM.
