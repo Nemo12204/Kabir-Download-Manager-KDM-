@@ -1,4 +1,4 @@
-# Kabir Download Manager
+# Kabir Download Manager(MADE WITH AI)
 
 A free, native Windows download manager built with C# / .NET 8 / WPF. MIT licensed, with no third-party runtime libraries.
 
