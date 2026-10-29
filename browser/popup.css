@@ -1,0 +1,34 @@
+:root { color-scheme: dark; font-family: "Segoe UI", sans-serif; color: #f4f5f7; background: #14161b; }
+* { box-sizing: border-box; }
+body { width: 380px; max-width: 100%; margin: 0; padding: 22px; }
+header strong { font-size: 26px; color: #ffa500; }
+header span { font-size: 12px; color: #a4acbb; font-weight: 400; }
+p { line-height: 1.5; }
+header p, .empty, .note, small { color: #a4acbb; font-size: 12px; }
+label { display: block; font-size: 12px; margin: 20px 0 8px; }
+.entry { display: flex; gap: 8px; }
+input { width: 100%; min-width: 0; background: #0d0f13; color: #f4f5f7; border: 1px solid #373c46; border-radius: 6px; padding: 10px; }
+button { background: #ffa500; color: #161616; border: 0; border-radius: 6px; padding: 10px 14px; font-weight: 600; cursor: pointer; }
+button:hover { background: #ffc300; }
+button:disabled { opacity: .5; cursor: wait; }
+:focus-visible { outline: 2px solid #ffc300; outline-offset: 3px; }
+h1 { font-size: 14px; margin: 24px 0 12px; }
+#media { max-height: 340px; overflow: auto; }
+article { background: #20232a; border: 1px solid #30343e; padding: 12px; border-radius: 6px; margin-bottom: 8px; }
+article p { margin: 0 0 6px; overflow-wrap: anywhere; font-size: 12px; }
+article button { display: block; margin-top: 10px; padding: 6px 10px; font-size: 11px; }
+.note { font-size: 10px; }
+#status { color: #ffc300; font-size: 12px; overflow-wrap: anywhere; }
+.desktop { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 18px; }
+#connection { font-size: 11px; color: #a4acbb; }
+#connection[data-connected="true"] { color: #b8d591; }
+.desktop button { background: #292d35; color: #f4f5f7; border: 1px solid #454c59; font-size: 11px; }
+.help { color: #ffc300; font-size: 11px; }
+.capture { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px; background: #20232a; border: 1px solid #373c46; border-radius: 6px; cursor: pointer; }
+.capture small { display: block; margin-top: 4px; font-size: 10px; }
+.capture input { width: 18px; height: 18px; flex-shrink: 0; accent-color: #ffa500; cursor: pointer; }
+#capture-help { margin-top: 6px; }
+body.setup { width: auto; max-width: 700px; margin: 40px auto; }
+.setup li { margin-bottom: 14px; line-height: 1.6; }
+.setup h1 { font-size: 24px; }
+code { overflow-wrap: anywhere; color: #ffc300; }

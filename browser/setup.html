@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>KDM browser setup</title><link rel="stylesheet" href="popup.css"></head>
+<body class="setup">
+  <header><strong>kabir<span> / BROWSER SETUP</span></strong></header>
+  <h1>Connect your browser to KDM</h1>
+  <ol>
+    <li>Extract the portable KDM app into a permanent folder.</li>
+    <li>Double-click <code>Install-Browser.cmd</code> in that folder. This registers the native desktop bridge for your Windows account.</li>
+    <li>Open <code>chrome://extensions</code> or <code>edge://extensions</code>, enable <strong>Developer mode</strong>, choose <strong>Load unpacked</strong>, and select KDM's <code>browser</code> folder.</li>
+    <li>Pin the extension. Open its popup and look for <strong>Desktop connected</strong>.</li>
+  </ol>
+  <p><strong>Automatically download in KDM</strong> is on by default. Click a download link normally: the extension pauses the browser transfer and cancels it after KDM saves the queue entry. If the handoff fails, the browser transfer resumes.</p>
+  <p>Turn the switch off to download with your browser. Browser-local exports and detected POST downloads stay in the browser. Login cookies and request bodies are not transferred; turn capture off for downloads that require your browser session. Transfer failures after KDM accepts a file appear in KDM for retry.</p>
+  <p>You can also right-click a link and choose <strong>Download with KDM</strong>, paste a URL into the popup, or select detected direct video/audio.</p>
+  <p>Updating an existing installation? Reload KDM on your browser's extensions page, and approve the added <strong>Manage your downloads</strong> permission if prompted.</p>
+  <h1>KDM in the system tray</h1>
+  <p>Closing or minimizing KDM keeps transfers running beside the Windows clock. Use the hidden-icons arrow if the orange KDM icon is not visible. Double-click it, or choose <strong>Open KDM</strong> in this extension, to restore the window.</p>
+  <p>Right-click the tray icon for <strong>Show KDM</strong>, <strong>Pause all</strong>, <strong>Resume all</strong>, and <strong>Exit KDM</strong>. Exit saves download progress before stopping.</p>
+  <p class="note">If you move the app folder, run Install-Browser.cmd again. Adaptive HLS/DASH manifests can be copied; complete-video assembly is not supported.</p>
+</body>
+</html>
