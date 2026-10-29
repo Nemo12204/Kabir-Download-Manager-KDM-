@@ -18,38 +18,6 @@ Closing or minimizing the window hides KDM beside the Windows clock and keeps do
 
 `KabirDownloadManager.exe --tray` starts in the tray. `KabirDownloadManager.exe --exit` requests graceful exit of the current instance. The browser bridge starts the desktop in the tray for background requests.
 
-## Build and test
-
-Install the .NET 8 SDK, then run from this source directory:
-
-```powershell
-.\build.ps1
-```
-
-On the machine where this project was created, an isolated SDK is available:
-
-```powershell
-.\build.ps1 -Dotnet "$env:LOCALAPPDATA\Temp\opencode\dotnet8\dotnet.exe"
-```
-
-`build.ps1` runs the HTTP integration suite and real WPF desktop checks, then publishes both executables into `artifacts\KDM`. The desktop checks briefly open a test window and write screenshots under `artifacts\screenshots`. `-SkipTests` is available for packaging an already-verified revision.
-
-Individual commands:
-
-```powershell
-dotnet run --project tests/Kdm.Tests -c Release
-dotnet run --project tests/Kdm.DesktopTests -c Release
-dotnet run --project src/Kdm.App -c Release
-```
-
-Open `KabirDownloadManager.sln` in Visual Studio 2022 with the .NET desktop workload to edit the full solution. Optional checks for the published native host and Chromium extension:
-
-```powershell
-dotnet run --project tests/Kdm.Tests -c Release -- --native-host artifacts/KDM/Kdm.NativeHost.exe
-node tests/browser-test.mjs
-```
-
-The browser check requires Node.js 22+, Chrome, a published app, and native-host registration via `tools\Register-Browser.ps1`. Exit KDM before running it. It uses an isolated temporary browser profile and download library, serves its own local audio fixture, and verifies native messaging into the real desktop app. Set `CHROME_PATH` if Chrome is installed elsewhere. Verification results are recorded in `docs/VERIFICATION.md`.
 
 ## Browser integration
 
